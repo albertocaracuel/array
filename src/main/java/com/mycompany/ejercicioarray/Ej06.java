@@ -20,21 +20,25 @@ public class Ej06 {
 
     public static boolean verificar(int[] array, int[] array1) {
         boolean encuentra = false;
-        for (var i = 0; i < array.length; i++) {
-            encuentra = false;
-            for (var j = 0; j < array1.length; j++) {
-                if (array[i] == array1[j]) {
+        if(array.length!=array1.length){
+            System.out.println(encuentra);
+        }
+        
+        if(array.length==array1.length){
+        for (int i = 0; i < array.length; i++) {           
+                if (array[i] == array1[i]) {
                     encuentra = true;
                     break;
                 }
-            }
+            
             if (encuentra != true) {
-                System.out.println("los arreglos no son iguales");
+                System.out.println(encuentra);
                 break;
             }
         }
         if (encuentra == true) {
-            System.out.println("si son iguales");
+            System.out.println(encuentra);
+        }
         }
         return false;
     }
